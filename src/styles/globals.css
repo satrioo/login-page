@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.834);
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #3d5af1 transparent #3d5af1 transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon {
+  position: absolute;
+  right: 8px;
+  top: 13px;
+  width: 26px;
+}
+
+.bg-purples {
+  background-color: #7879F1;
+}
+
+.text-purples {
+  color: #3E334E;
+}
+
+input {
+  border: solid 1px #AFA2C3;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 3px;
+  accent-color: #7879F1;
+}
+
+input[type=checkbox] {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.invalid-feedback {
+  font-size: 14px;
+  color: #de2121;
+  font-weight: 500;
+}
+
+.btn {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3E334E;
+  border: solid 1px #3E334E;
+  border-radius: 5px;
+  padding: 6px;
+  transition: border-color 0.5s, background-color 0.5s, color
+}
+
+.btn:hover {
+  background-color: #292a96;
+  border-color: #292a96;
+  color: #fff;
+}
+
+.btn-purple {
+  color: #fff;
+  background: #7879F1;
+  border-color: #7879F1;
+}
+
+.btn-small {
+  border-color: #AFA2C3;
+  font-size: 14px;
+}
